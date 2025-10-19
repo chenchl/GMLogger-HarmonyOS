@@ -1,0 +1,19 @@
+{
+  "name": "@chenchl/gmlogger",
+  "keywords": [
+    'security',
+    '安全',
+    '日志',
+    'OpenHarmony',
+    'HarmonyOS'
+  ],
+  "homepage": "https://github.com/chenchl",
+  "repository": "https://github.com/chenchl/GMLogger-HarmonyOS",
+  "version": "1.0.0",
+  "description": "一个可以在HarmonyOS使用的安全日志组件",
+  "main": "Index.ets",
+  "author": "chenchl",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {}
+}
