@@ -8,22 +8,25 @@
 - **线程安全**：通过Worker线程实现异步文件写入，确保高性能不造成主线程卡顿（[`LogToFileWorker.ets`](file://gmlogger/src/main/ets/workers/LogToFileWorker.ets#L0-L51)）
 - **堆栈跟踪**：支持堆栈跟踪，记录调用方法流程（[`LoggerUtil.ets`](file://gmlogger/src/main/ets/components/security/logger/LoggerUtil.ets#L0-L51)）
 - **方法装饰器**：支持使用装饰器装饰方法，自动记录方法调用（参数、返回值、耗时）（[`LogDescriptor.ets`](file://gmlogger/src/main/ets/components/security/logger/LogDescriptor.ets#L0-L40)）
+
+## 仓库地址
+[GMLogger-HarmonyOS](https://github.com/chenchl/GMLogger-HarmonyOS)
+
 ## 集成方法
 
-### 1. 添加依赖
-
-在需要引入的模块 `oh-package.json5` 文件中添加：
-
-```json
-"dependencies": { 
-    "@chenchl/gmlogger": "file:../entry/libs/chenchl-gmlogger-1.0.0.har" 
-}
-```
-
-### 2. 同步依赖
+### 1. 同步依赖
 
 ```bash
-ohpm install
+ohpm install @chenchl/gmlogger
+```
+
+#### 2. 混淆规则（可选）
+
+- 如果希望gmlogger库在代码混淆过程中不会被混淆，需要在混淆规则配置文件obfuscation-rules.txt中添加相应的排除规则：
+
+```
+-keep
+./oh_modules/@chenchl/gmlogger
 ```
 ## 使用说明
 
